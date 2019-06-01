@@ -6,8 +6,8 @@ const todoSchema = new Schema({
   author: { type: String, required: true },
   description: { type: String, required: true },
   completed: { type: Boolean, required: true, default: false },
-  submitted_at: { type: Date, required: true, default: Date().now() },
-  completed_at: { type: Date, required: true }
+  submitted_at: { type: Date, required: true, default: Date.now },
+  completed_at: { type: Date, required: true, default: Date.now + 1000 }
 });
 
 const ToDo = mongoose.model("To-do", todoSchema);
