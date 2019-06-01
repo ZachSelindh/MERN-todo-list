@@ -5,6 +5,7 @@ const router = require("express").Router();
 
 // API Routes
 /* router.use("/api", apiRoutes); */
+
 // Send React start point if no API routes are called.
 router.use(function(req, res) {
   res.sendFile(
